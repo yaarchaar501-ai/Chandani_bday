@@ -1,0 +1,714 @@
+
+/* =================================
+   CHANDANI BIRTHDAY WEBSITE
+   DREAMY PINK 3D THEME
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5fa;
+    color: #633b4b;
+    overflow-x: hidden;
+}
+
+/* 3D Background */
+
+#three-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Floating Hearts */
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Welcome Section */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,0.8), transparent 45%),
+        linear-gradient(135deg,
+        #ffd6e7, #fff0f5, #f2d9ff);
+
+    position: relative;
+}
+
+.hero-content {
+    animation: appear 1.5s ease;
+}
+
+.small-text, .tag {
+    color: #d65b8a;
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(55px, 10vw, 110px);
+    color: #d64c83;
+    text-shadow: 0 8px 20px #e8a5c3;
+    margin-top: 20px;
+}
+
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(35px, 7vw, 70px);
+    color: #99446b;
+    margin-top: 10px;
+}
+
+.subtitle {
+    margin: 20px 0 30px;
+    font-size: 15px;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.4s ease;
+}
+
+.hero button,
+.music-card button {
+    background: linear-gradient(135deg, #e85b96, #bb65c8);
+    color: white;
+    padding: 16px 30px;
+    border-radius: 40px;
+    font-size: 15px;
+    box-shadow: 0 8px 25px rgba(214, 76, 131, 0.4);
+}
+
+.hero button:hover,
+.music-card button:hover {
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 15px 35px rgba(214, 76, 131, 0.5);
+}
+
+.scroll-text {
+    margin-top: 50px;
+    font-size: 12px;
+    animation: pulse 2s infinite;
+}
+
+/* Common Sections */
+
+.section {
+    padding: 90px 7%;
+    text-align: center;
+    position: relative;
+    background: rgba(255, 247, 250, 0.88);
+}
+
+.section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(38px, 6vw, 60px);
+    color: #ca4d7d;
+    margin: 18px 0 25px;
+}
+
+.message p:last-child {
+    max-width: 700px;
+    margin: auto;
+    line-height: 2.1;
+}
+
+/* Music Section */
+
+.music {
+    background: linear-gradient(135deg, #ffe4ef, #f9e4ff);
+}
+
+.music-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 40px 25px;
+    background: rgba(255,255,255,0.85);
+    border: 1px solid #fff;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(196, 111, 151, 0.2);
+    transform-style: preserve-3d;
+    transition: 0.4s;
+}
+
+.music-card:hover {
+    transform: perspective(900px) rotateY(7deg)
+               rotateX(5deg) translateY(-8px);
+}
+
+.music-icon {
+    font-size: 70px;
+    animation: pulse 1.5s infinite;
+}
+
+.music-card h3 {
+    margin: 18px 0 10px;
+}
+
+.music-card p {
+    margin-bottom: 22px;
+    font-size: 13px;
+}
+
+/* Photo Gallery */
+
+.gallery {
+    background: #fff;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.photo-grid figure {
+    background: #fff2f7;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(180, 91, 130, 0.15);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+
+.photo-grid figure:hover {
+    transform: perspective(900px)
+               rotateY(-7deg)
+               rotateX(5deg)
+               translateY(-10px) scale(1.02);
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.photo-grid figcaption {
+    padding: 15px 5px 8px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: #c74e80;
+}
+
+/* Birthday Letter */
+
+.letter {
+    background: linear-gradient(135deg, #ffe8f1, #f7e7ff);
+}
+
+.letter-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    background: #fffdfb;
+    border: 2px solid #f7d5e3;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(180, 91, 130, 0.2);
+    text-align: left;
+    line-height: 2.1;
+    transition: 0.4s;
+}
+
+.letter-card:hover {
+    transform: perspective(1000px) rotateX(2deg);
+}
+
+.letter-card p {
+    margin-bottom: 18px;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 27px;
+    color: #d64c83;
+}
+
+/* Birthday Cake */
+
+.cake-section {
+    background: #fff;
+}
+
+.cake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 30px auto;
+    transition: 0.5s;
+    filter: drop-shadow(0 15px 15px rgba(210, 80, 140, 0.2));
+}
+
+.cake:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.candle {
+    font-size: 48px;
+}
+
+.cake-top {
+    height: 65px;
+    width: 155px;
+    background: linear-gradient(135deg, #ffb3d2, #ec82b0);
+    border-radius: 50% 50% 10px 10px;
+    border-bottom: 12px solid #fff0f5;
+}
+
+.cake-bottom {
+    height: 70px;
+    width: 195px;
+    background: linear-gradient(135deg, #ec92b8, #d95c91);
+    border-radius: 8px 8px 25px 25px;
+    border-bottom: 10px solid #b84979;
+}
+
+#cakeMessage {
+    color: #d95789;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Gift Box */
+
+.gift-section {
+    background: linear-gradient(135deg, #ffdfeb, #fff2f7);
+}
+
+.gift {
+    font-size: 110px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+    filter: drop-shadow(0 15px 15px rgba(180, 70, 120, 0.25));
+    animation: giftFloat 3s ease-in-out infinite;
+}
+
+.gift:hover {
+    transform: scale(1.15);
+}
+
+.gift-message {
+    display: none;
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 25px;
+    line-height: 2;
+    box-shadow: 0 12px 35px rgba(180, 70, 120, 0.2);
+    animation: appear 0.8s ease;
+}
+
+.gift-message h3 {
+    color: #d95789;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+
+footer {
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #d95789, #a95ba9);
+    color: white;
+    text-align: center;
+    line-height: 2.2;
+}
+
+footer h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+}
+
+/* Animations */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes giftFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .photo-grid img {
+        height: 280px;
+    }
+
+    .letter-card {
+        padding: 25px 20px;
+        font-size: 14px;
+    }
+
+    .gift {
+        font-size: 90px;
+    }
+
+}
+
+/* ===== CHANDANI DREAMY LUXURY THEME ===== */
+
+body {
+  background:
+    radial-gradient(ellipse at 15% 15%, #ffe0ef 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 25%, #eadfff 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, #ffd6e8 0%, transparent 50%),
+    linear-gradient(135deg, #fff5fa, #f9efff);
+  color: #713b60;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glowing birthday headings */
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #d94b91;
+  text-shadow:
+    0 0 8px #ffb5d8,
+    0 0 20px #ffb5d855;
+}
+
+/* Premium glass cards */
+
+.section,
+.letter {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  box-shadow:
+    0 15px 40px rgba(204, 105, 158, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Premium buttons */
+
+button {
+  background: linear-gradient(135deg, #ff83b9, #c77dff);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-weight: 600;
+  box-shadow: 0 8px 22px #d66bb755;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 14px 30px #d66bb777;
+}
+
+/* Smooth photo effects */
+
+.photo-grid img {
+  border: 5px solid rgba(255,255,255,0.85);
+  box-shadow: 0 12px 28px rgba(180, 90, 140, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.photo-grid img:hover {
+  transform: perspective(800px) rotateY(8deg)
+             rotateX(5deg) scale(1.06);
+  box-shadow: 0 20px 35px #d66bb755;
+}
+
+/* Mobile-friendly headings */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Magical floating butterflies and stars */
+
+#magic-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.magic-item {
+  position: absolute;
+  bottom: -50px;
+  animation: magicalFloat linear forwards;
+  filter: drop-shadow(0 0 8px #ff9ed0);
+}
+
+@keyframes magicalFloat {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(.7);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-115vh) rotate(360deg) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* ===== 3D BIRTHDAY CAKE ===== */
+
+.cake {
+  display: inline-block;
+  font-size: 120px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  animation: cakeFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 15px 15px #e7548060);
+  transition: transform 0.4s ease;
+}
+
+.cake:hover {
+  transform: perspective(600px) rotateY(20deg) rotateX(10deg) scale(1.12);
+}
+
+@keyframes cakeFloat {
+  0%, 100% {
+    transform: translateY(0) rotateY(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateY(5deg);
+  }
+}
+
+/* Glowing candle message */
+
+#cakeMessage {
+  color: #d94b91;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 12px #ffacd2;
+  animation: cakeGlow 1.5s infinite alternate;
+}
+
+@keyframes cakeGlow {
+  from {
+    text-shadow: 0 0 5px #ffacd2;
+  }
+  to {
+    text-shadow: 0 0 20px #ff69b4;
+  }
+}
+
+/* ===== MAGIC HEART LOCKET ===== */
+
+.locket-section {
+  text-align: center;
+  padding: 45px 15px;
+  perspective: 1000px;
+}
+
+.heart-locket {
+  width: 170px;
+  height: 170px;
+  margin: 35px auto;
+  cursor: pointer;
+  perspective: 900px;
+  animation: locketFloat 3s ease-in-out infinite;
+}
+
+.locket-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd1e8, #d98aff, #ff8bbd);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 30px #ff80c0, 0 15px 35px #bb60a755;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.locket-front {
+  width: 88%;
+  height: 88%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff1f8, #ffadd4);
+  border: 4px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 20px #ff83bd;
+}
+
+.heart-symbol {
+  font-size: 75px;
+  filter: drop-shadow(0 0 12px #ff4fa3);
+}
+
+.locket-label {
+  color: #a63e79;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.heart-locket:hover .locket-back {
+  transform: rotateY(25deg) rotateX(12deg) scale(1.08);
+}
+
+@keyframes locketFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.locket-message {
+  display: none;
+  max-width: 450px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 35px #e879b555;
+  animation: pageEnter .8s ease;
+}
+
+.locket-message.show {
+  display: block;
+}
+
+.memory-globe {
+  display: none;
+  width: min(300px, 85vw);
+  height: min(300px, 85vw);
+  margin: 35px auto;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #fff, #f9c4ed 40%, #c68cff 100%);
+  border: 8px solid rgba(255,255,255,.8);
+  box-shadow: 0 0 35px #e9a4ff, inset -12px -15px 30px #a55bd955;
+  align-items: center;
+  justify-content: center;
+  animation: globeFloat 3s ease-in-out infinite;
+}
+
+.memory-globe.show {
+  display: flex;
+}
+
+.globe-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.globe-heart {
+  font-size: 50px;
+  animation: cakeGlow 1.5s infinite alternate;
+}
+
+@keyframes globeFloat {
+  50% { transform: translateY(-12px) rotateY(8deg); }
+}
+
+@media(max-width:600px) {
+  .heart-locket {
+    width: 145px;
+    height: 145px;
+  }
+}

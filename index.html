@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Chandani ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 3D Background -->
+    <canvas id="three-bg"></canvas>
+
+    <!-- Floating Hearts -->
+    <div id="hearts"></div>
+    <div id="magic-particles"></div>
+
+    <!-- Welcome Page -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-text">
+                A Little Surprise Made With Love
+            </p>
+
+            <h1>Happy Birthday</h1>
+
+            <h2>Chandani Swaraj ❤️</h2>
+
+            <p class="subtitle">
+                You are someone's favourite person in this world!
+            </p>
+
+            <button onclick="showSurprise()">
+                Open Your Surprise 🎁
+            </button>
+
+            <p class="scroll-text">
+                Scroll down for your magical surprise ↓
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Birthday Message -->
+    <section class="section message" id="message">
+
+        <p class="tag">A Special Day ✨</p>
+
+        <h2>Hey Chandani!</h2>
+
+        <p>
+            Some people make life beautiful just by being in it.
+            And you are one of those people.
+            Today is all about celebrating you.
+            May your smile always shine brighter than the stars!
+
+
+            Happiest Birthday, Chandani !!! ❤️🎂 Meri dil se yahi wish hai ki tumhari life hamesha khushiyon se bhari rahe aur tumhare chehre par ye beautiful smile hamesha bani rahe. Tum un logon mein se ho jinki presence bina kuch kahe bhi achha feel karwa deti hai. Life mein chahe kitni bhi problems aayein, bas kabhi himmat mat haarna aur khud par bharosa hamesha rakhna. I hope tumhare saare dreams poore hon aur tumhe life mein woh sab kuch mile jo tum deserve karti ho. Hamesha apna khayal rakhna, apni health ka dhyan rakhna aur kabhi kisi chhoti si baat ki wajah se apni smile mat khona. Ho sakta hai kabhi-kabhi life tumhare according na chale, lekin I hope tumhare paas hamesha itni strength ho ki tum har situation ko smile ke saath face kar sako. Honestly, tum ek bahut achhi insaan ho aur tumhari ye achhi nature tumhe dusron se thoda alag banati hai. Kuch log bina zyada kuch kiye bhi apni ek achhi jagah bana lete hain, aur tum unmein se ek ho. I hope aane wala har din tumhare liye naye opportunities, beautiful memories aur endless happiness lekar aaye. Kabhi khud ko kisi se compare mat karna, because tum apni jagah bahut special ho. Bas aise hi haste rehna, khush rehna aur apne dreams ke peeche bhaagte rehna. Aaj ka din achhe se enjoy karna, खूब saari memories banana aur apna bahut saara khayal rakhna. Once again, happiest birthday, Chandni! Hamesha khush raho, blessed raho aur life mein bahut aage badho. ❤️✨
+        </p>
+
+    </section>
+
+
+    <!-- Music -->
+    <section class="section music">
+
+        <p class="tag">A Song For You from bottom of my heart🎵</p>
+
+        <h2>Your Birthday Melody</h2>
+
+        <div class="music-card">
+
+            <div class="music-icon">🎶</div>
+
+            <h3>Made For You</h3>
+
+            <p>A little music, a lot of memories.</p>
+
+            <audio id="birthdaySong"
+                   src="C5.mp3">
+            </audio>
+
+            <button onclick="toggleMusic()" id="musicButton">
+                ▶ Ye apke liye, just click it!!
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Photo Gallery -->
+    <section class="section gallery" id="gallery">
+
+        <p class="tag">Your Beautiful Memories 📸</p>
+
+        <h2>Little Moments, Big Memories</h2>
+
+        <div class="photo-grid">
+
+            <figure>
+                <img src="C1.jpeg" alt="Memory 1">
+                <figcaption>Beautiful Memories ❤️</figcaption>
+            </figure>
+
+            <figure>
+                <img src="C2.jpeg" alt="Memory 2">
+                <figcaption>Endless Smiles ✨</figcaption>
+            </figure>
+
+            <figure>
+                <img src="C3.jpeg" alt="Memory 3">
+                <figcaption>Your Special Moments 🌸</figcaption>
+            </figure>
+
+            <figure>
+                <img src="C4.jpeg" alt="Memory 4">
+                <figcaption>Forever Memories 💗</figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- Emotional Letter -->
+    <section class="section letter">
+
+        <p class="tag">Words From My Heart 💌</p>
+
+        <h2>A Letter For You</h2>
+
+        <div class="letter-card">
+
+            <p>Dear Chandani, ❤️</p>
+
+            <p>
+                
+                I don't think words are ever enough to describe
+                how special you are.
+            </p>
+
+            <p>
+                You are not just my  friend, you are one of
+                the most beautiful parts of my life. Every laugh,
+                every silly conversation and every little memory
+                with you means so much to me.
+            </p>
+
+            <p>
+                Thank you for being there, for making ordinary
+                days extraordinary and for bringing happiness
+                into my life.
+            </p>
+
+            <p>
+                I wish that all your dreams come true. May you
+                always find reasons to smile, strength during
+                difficult times and endless love wherever you go.
+            </p>
+
+            <p>
+                No matter how much life changes, I hope our 
+                friendship always remains this special.
+                You deserve all the happiness in the universe.
+            </p>
+
+            <p>
+                Never stop smiling, never stop shining and
+                never forget how amazing you are.
+            </p>
+
+            <p class="signature">
+                With lots of love,<br>
+                Yours  ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Birthday Cake -->
+    <section class="section cake-section">
+
+        <p class="tag">Make A Wish 🌟</p>
+
+        <h2>It's Cake Time Madam !!</h2>
+
+        <div class="cake" onclick="celebrate()">
+
+            <div class="candle">🕯️</div>
+
+            <div class="cake-top"></div>
+
+            <div class="cake-bottom"></div>
+
+        </div>
+
+        <p>Just click on it yawwrrr!!!!</p>
+
+        <p id="cakeMessage"></p>
+
+    </section>
+
+
+    <!-- Gift Box -->
+    <section class="section gift-section">
+
+        <p class="tag">One Last Surprise 🎀</p>
+
+        <h2>A Gift For You</h2>
+
+       
+
+<!-- MAGIC HEART LOCKET -->
+<div class="locket-section">
+
+  <h2>Your Special Gift, Chandu 💗</h2>
+
+  <p>A little piece of my heart, just for you...</p>
+
+  <div class="heart-locket" onclick="openLocket()">
+    <div class="locket-back">
+      <div class="locket-front">
+        <span class="heart-symbol">💗</span>
+        <span class="locket-label">For You ❤️</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="locketMessage" class="locket-message">
+    <h2>My Favourite Person ❤️</h2>
+
+    <p>
+      No matter how many people come into my life,
+      you will always have a special place in my heart.
+      Thank you for being my favourite person.
+    </p>
+
+    <p>Lots of love, always! 💝</p>
+
+    <button onclick="openMemories()">
+      Open Your Memories ✨
+    </button>
+  </div>
+
+  <div id="memoryGlobe" class="memory-globe">
+    <div class="globe-content">
+      <div class="globe-heart">💖</div>
+      <h2> Beautiful Memories</h2>
+      <p>Every memory with you is precious! ❤️</p>
+      <p>Our friendship is my favourite treasure.</p>
+    </div>
+  </div>
+
+</div>
+
+        
+
+        >
+
+            <h3>You Are Truly Special, Chandani! ❤️</h3>
+
+            <p>
+                If I could gift you one thing, it would be the
+                ability to see yourself through my eyes.
+                Then you would understand how wonderful you are.
+            </p>
+
+            <p>Keep shining forever! ✨</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>Forever Special ❤️</h2>
+
+        <p>Made with love, just for Chandu!!!!!!.</p>
+
+        <p>Happy Birthday! 🎂</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
