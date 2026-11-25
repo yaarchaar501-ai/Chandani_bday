@@ -712,3 +712,47 @@ button:hover {
     height: 145px;
   }
 }
+
+
+
+
+/* SPECIAL BIRTHDAY VIDEO */
+.video-section {
+  text-align: center;
+  padding: 60px 20px;
+  margin: 30px auto;
+}
+
+.video-section h2 {
+  color: #d63384;
+  font-size: 2rem;
+  text-shadow: 0 0 12px #ffb6d9;
+  margin-bottom: 15px;
+}
+
+.video-section p {
+  color: #a64d79;
+  margin-bottom: 25px;
+}
+
+.birthday-video {
+  width: 90%;
+  max-width: 650px;
+  border-radius: 22px;
+  border: 4px solid #ffb6d9;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+
+@media (max-width: 600px) {
+  .birthday-video {
+    width: 100%;
+  }
+
+  .video-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
